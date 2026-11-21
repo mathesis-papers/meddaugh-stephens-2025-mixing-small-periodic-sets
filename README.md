@@ -5,13 +5,15 @@
 Extending Moothathu's progression-exclusion construction (2010), we answer the open Question 5.6 of Meddaugh and Stephens (arXiv:2509.04312v1, Section 5, p. 12; 2025) affirmatively by constructing a mixing, surjective binary forward subshift with neighborhood 2-shadowing and a nonempty clopen set containing no nonempty periodic set. The subshift forbids an all-one arithmetic progression of length p^2+3 and difference p, for each positive integer p. Two separated deletion masks from a quadratic-irrational rotation trace every sufficiently accurate pseudo-orbit. The same construction is not of quasi-finite type, giving a further affirmative example for Question 5.3 (Section 5, p. 11), and has no ordinary shadowing. The same conclusions hold for every progression-length function ell(p)>=3 with ell(p)/p tending to infinity, without a monotonicity assumption. Each of the two tracing points can trace at a syndetic set of times, despite failure of quasi-finite type.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24404947](https://doi.org/10.5281/zenodo.24404947)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24404946](https://doi.org/10.5281/zenodo.24404946)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [meddaugh-stephens-2025-mixing-small-periodic-sets](https://mathesis-omega-research.apps.chrono-ai.fun/papers/meddaugh-stephens-2025-mixing-small-periodic-sets?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Neighborhood two-shadowing for progression subshifts: an extension of Moothathu (2010) answering Meddaugh–Stephens, arXiv:2509.04312v1, Section 5, Question 5.6. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/meddaugh-stephens-2025-mixing-small-periodic-sets?version=2
+Haobo Ma, Wenlin Zhang (2026). Neighborhood two-shadowing for progression subshifts: an extension of Moothathu (2010) answering Meddaugh–Stephens, arXiv:2509.04312v1, Section 5, Question 5.6. Mathesis, version 2. https://doi.org/10.5281/zenodo.24404947
 
 ## Statement progress
 
