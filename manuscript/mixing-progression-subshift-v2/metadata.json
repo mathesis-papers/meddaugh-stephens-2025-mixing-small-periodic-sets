@@ -1,0 +1,45 @@
+{
+  "id": "meddaugh-stephens-2025-mixing-small-periodic-sets",
+  "revision": 2,
+  "problem_ids": [
+    "meddaugh-stephens-2025-mixing-small-periodic-sets",
+    "meddaugh-stephens-2025-neighborhood-two-shadowing"
+  ],
+  "topic": "Meddaugh–Stephens Section 5, Question 5.6, Question 5.3, superlinear progression lengths and syndetic two-point tracing",
+  "title": "Neighborhood two-shadowing for progression subshifts: an extension of Moothathu (2010) answering Meddaugh–Stephens, arXiv:2509.04312v1, Section 5, Question 5.6",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Extending Moothathu's progression-exclusion construction (2010), we answer the open Question 5.6 of Meddaugh and Stephens (arXiv:2509.04312v1, Section 5, p. 12; 2025) affirmatively by constructing a mixing, surjective binary forward subshift with neighborhood 2-shadowing and a nonempty clopen set containing no nonempty periodic set. The subshift forbids an all-one arithmetic progression of length p^2+3 and difference p, for each positive integer p. Two separated deletion masks from a quadratic-irrational rotation trace every sufficiently accurate pseudo-orbit. The same construction is not of quasi-finite type, giving a further affirmative example for Question 5.3 (Section 5, p. 11), and has no ordinary shadowing. The same conclusions hold for every progression-length function ell(p)>=3 with ell(p)/p tending to infinity, without a monotonicity assumption. Each of the two tracing points can trace at a syndetic set of times, despite failure of quasi-finite type.",
+  "summary": "Progression-avoidance shifts separate neighborhood 2-shadowing from dense small periodic sets even under mixing. Every superlinear progression-length function at least three gives such a system, without quasi-finite type, soficity, specification or ordinary shadowing; each individual tracing point can trace syndetically.",
+  "license": "cc-by-4.0",
+  "related_work": [
+    {"authors": "T. K. Subrahmonian Moothathu", "date": "2010", "url": "https://doi.org/10.4064/cm120-1-9", "locator": "Proposition 3(iv), p. 131", "scope": "Prior fixed-length progression-exclusion example, zero-gap mixing and repeated-return obstruction"},
+    {"authors": "D. Kwietniak, J. Li, P. Oprocha and X. Ye", "date": "2015 preprint; 2017 journal", "url": "https://arxiv.org/abs/1501.01491v3", "locator": "Proposition 4.17, p. 19", "scope": "Later forward presentation explicitly crediting Moothathu"},
+    {"authors": "zeb; Ronnie Pavlov", "date": "2020-10-30; 2021-07-28", "url": "https://mathoverflow.net/questions/375212/binary-words-that-are-nonconstant-on-long-arithmetic-progressions", "locator": "Dated answers", "scope": "Qualitative bounded constant runs along each fixed-step progression, using rotations or total minimality"},
+    {"authors": "M. E. Can, J. Konieczny, M. Kupsa and D. Kwietniak", "date": "2023 preprint; 2025 journal", "url": "https://arxiv.org/abs/2308.13967v2", "locator": "Section 1.5, Example 21, Proposition 22", "scope": "Hereditary deletion and mixing; density-based shadowing is distinct from fixed-pair pointwise tracing"}
+  ],
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S1/Dynamics/Shadowing/ProgressionExample.lean",
+  "posing_source": {
+    "authors": ["Jonathan Meddaugh", "Elyssa Stephens"],
+    "title": "Shadowing With Small Diameter Sets Of Bounded Cardinality",
+    "url": "https://arxiv.org/abs/2509.04312v1",
+    "date": "2025-09-04",
+    "locators": ["Definition 2.1, p. 2", "Definition 3.5, p. 7", "Theorem 4.2, p. 10", "Proposition 4.3, p. 10", "Section 5, Questions 5.1–5.3, p. 11", "Section 5, Questions 5.4–5.6, p. 12"]
+  },
+  "proof_coverage": {
+    "written": ["mixing", "neighborhood 2-shadowing", "no nonempty periodic subset in the one cylinder", "unique periodic point", "failure of ordinary shadowing", "failure of quasi-finite type", "all conclusions for ell(p)>=3 with ell(p)/p tending to infinity, without monotonicity", "absence of a mixing number, soficity and specification", "syndetic tracing by each of the fixed two points"],
+    "lean_declarations": [
+      {"file": "ProgressionExample.lean", "declaration": "D5.S1.Dynamics.Shadowing.quadratic_progression_example", "statement": "Nonemptiness, compactness, continuity, surjectivity, product transitivity, neighborhood 2-shadowing, and the nonempty periodic compact-set obstruction"},
+      {"file": "ProgressionSubshift.lean", "declaration": "D5.S1.Dynamics.Shadowing.progression_shift_mixing", "statement": "Mixing for progression lengths at least three"},
+      {"file": "ProgressionSubshift.lean", "declaration": "D5.S1.Dynamics.Shadowing.progression_no_invariant_subset", "statement": "No nonempty subset of the one cylinder is forward invariant under a positive iterate"},
+      {"file": "ProgressionTwoShadowing.lean", "declaration": "D5.S1.Dynamics.Shadowing.quadratic_progression_neighborhood_two_shadowing", "statement": "Neighborhood 2-shadowing for lengths p^2+3"},
+      {"file": "QuadraticRotationHitting.lean", "declaration": "D5.S1.Dynamics.Shadowing.sqrt_two_scaled_round_lower", "statement": "Lower bound 1/[M(M+3)k] for the nearest-integer distance of k sqrt(2)/M"},
+      {"file": "QuadraticRotationHitting.lean", "declaration": "D5.S1.Dynamics.Shadowing.sqrt_two_scaled_quarter_hitting", "statement": "Every closed quarter interval is hit at an index j<=256M(M+3)p along the p-step rotation"},
+      {"file": "ReturnDistanceShadowing.lean", "declaration": "D5.S1.Dynamics.Shadowing.NeighborhoodTwoShadowing", "statement": "Definition: one nonempty finite set with cardinality<=2, initial diameter<epsilon and all-natural-time tracing"}
+    ],
+    "written_extensions": "Superlinear two-point tracing, syndetic tracing, quasi-finite-type failure and the additional symbolic consequences have written proofs in Corollaries 3–5; they are not conclusions of the quadratic tracing declaration.",
+    "finite": "verify.py checks only the finite integer-arithmetic instances reported in checks.json."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "arithmetic": "exact integers; square-root comparisons by integer squares",
+  "general_length_obstructions": {
+    "base_max": 4,
+    "base_min": 1,
+    "binary_fillings": 74,
+    "families": [
+      "quadratic",
+      "three_halves",
+      "nonmonotone_quadratic"
+    ]
+  },
+  "integer_norm_bound": {
+    "denominators": [
+      32,
+      64,
+      96,
+      128,
+      160,
+      192
+    ],
+    "instances": 6000,
+    "multiplier_max": 1000,
+    "multiplier_min": 1
+  },
+  "joining": {
+    "instances": 10443,
+    "legal_words": 59,
+    "maximum_prefix_length": 5,
+    "placements_beyond_threshold": 3
+  },
+  "quarter_interval_hitting": {
+    "denominators": [
+      32,
+      64,
+      96
+    ],
+    "difference_max": 80,
+    "difference_min": 1,
+    "instances": 1920,
+    "largest_hitting_index": 376,
+    "starting_coordinates": [
+      0,
+      1,
+      17,
+      100
+    ]
+  },
+  "quasi_finite_type_obstruction": {
+    "all_binary_fillings": 1023,
+    "difference_max": 10,
+    "difference_min": 1
+  },
+  "schema_version": 1,
+  "scope": "Finite instances; infinite statements have written proofs in note.tex.",
+  "separated_masks": {
+    "instances": 84021,
+    "radius_max": 20,
+    "radius_min": 0,
+    "window_start_max": 4000,
+    "window_start_min": 0
+  },
+  "singleton_pseudo_orbits": {
+    "instances": 19,
+    "period_max": 20,
+    "period_min": 2
+  },
+  "status": "pass",
+  "syndetic_tracing_intervals": {
+    "instances": 210,
+    "radius_max": 20,
+    "radius_min": 0,
+    "starting_coordinates": [
+      0,
+      1,
+      17,
+      100,
+      1000
+    ]
+  }
+}

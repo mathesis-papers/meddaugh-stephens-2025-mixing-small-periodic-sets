@@ -1,0 +1,444 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\NN}{\mathbb N_0}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\diam}{\operatorname{diam}}
+\title{Neighborhood two-shadowing for progression subshifts:\newline an extension of Moothathu (2010) answering\newline Meddaugh--Stephens, arXiv:2509.04312v1,\newline Section 5, Question 5.6}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{November 5, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Moothathu's progression-exclusion construction (2010),
+we answer the open Question 5.6 of Meddaugh and Stephens
+(arXiv:2509.04312v1, Section 5, p.~12; 2025) affirmatively by constructing a mixing,
+surjective binary forward subshift with neighborhood $2$-shadowing
+and a nonempty clopen set containing no nonempty periodic set.
+The subshift forbids an all-one arithmetic progression of length
+$p^2+3$ and difference $p$, for each positive integer $p$.
+Two separated deletion masks from a quadratic-irrational rotation
+trace every sufficiently accurate pseudo-orbit. The same construction
+is not of quasi-finite type, giving a further affirmative example for
+Question 5.3 (Section 5, p.~11), and has no ordinary shadowing.
+The same conclusions hold for every progression-length function
+$\ell(p)\geq3$ with $\ell(p)/p\to\infty$, without a monotonicity
+assumption. Each of the two tracing points can trace at a syndetic
+set of times, despite failure of quasi-finite type.
+\end{abstract}
+
+\section{Statement and conventions}
+Meddaugh and Stephens introduce neighborhood $N$-shadowing in
+\cite[Definition 2.1]{MS}. For a compact metric dynamical system
+$(X,f)$, this means that for every $\varepsilon>0$ there is $\delta>0$
+such that every sequence $(z^i)_{i\in\NN}$ with
+$d(f(z^i),z^{i+1})<\delta$ admits a nonempty set $A\subseteq X$ with
+$|A|\leq N$, $\diam A<\varepsilon$, and
+\[
+ \min_{a\in A}d(f^i(a),z^i)<\varepsilon\qquad(i\in\NN).
+\]
+The choice of $a$ may depend on $i$; the set $A$ does not.
+Dense small periodic sets means that every nonempty open set contains
+a nonempty compact set $B$ with $f^p(B)=B$ for some $p\geq1$.
+Nonemptiness is essential: allowing $B=\varnothing$ would make the
+property automatic. Question 5.6 of \cite[Section 5, p.~12]{MS} asks whether weak mixing and neighborhood
+$N$-shadowing, for $N>1$, can hold without this property.
+For comparison, the finite-cardinality framework of
+the author manuscript of \cite[Definition 1.5]{CLMV} uses two-sided pseudo-orbit time and no
+separate initial-diameter bound. The definition used here is precisely
+\cite[Definition 2.1]{MS}, with natural-time pseudo-orbits and one fixed
+tracing set. The affirmative results for mixing sofic subshifts and
+systems with specification in \cite[Theorems 3.2, 3.3 and 4.2]{MS}
+do not provide the separation requested in Question 5.6.
+Our progression constraints retain two-point tracing but exclude
+every nonempty periodic subset of the one-cylinder.
+
+The construction has a concrete antecedent: Moothathu
+\cite[Proposition 3(iv), p.~131]{Moo} forbids three equally spaced
+ones, proves mixing by zero-gap joining, and obstructs repeated
+returns to the one-cylinder. A later forward-shift presentation
+explicitly credits him \cite[Proposition 4.17, p.~19 of v3]{KLOY}.
+The step-dependent forbidden length here permits neighborhood
+two-shadowing, which that fixed-length construction does not have.
+Irrational-rotation coding of words with bounded constant runs along
+each fixed-step progression appears in zeb's 2020 answer on
+MathOverflow \cite{MO}; Ronnie Pavlov gave another qualitative
+argument there in 2021. Our rotation lemma supplies an explicit
+bound suited to two separated deletion masks.
+Hereditary deletion and long-zero mixing also occur in
+\cite[Example 21 and Proposition 22 of v2]{CKKK}, whose
+$\bar d$-shadowing definition controls an upper density of symbol
+errors \cite[Section 1.5 of v2]{CKKK}, rather than pointwise
+coverage by a fixed nearby pair.
+
+For $p\geq1$ put $L(p)=p^2+3$ and define
+\begin{equation}\label{eq:X}
+ X=\left\{x\in\{0,1\}^{\NN}:
+   \text{for every }s\geq0,\ p\geq1,
+   \text{ some }0\leq j<L(p)\text{ has }x_{s+jp}=0\right\}.
+\end{equation}
+Here and below $\NN=\{0,1,2,\ldots\}$. Give $X$ the metric
+$d(x,y)=2^{-\min\{k:x_k\ne y_k\}}$ for $x\ne y$, and $d(x,x)=0$.
+Let $\sigma(x)_k=x_{k+1}$.
+
+\begin{theorem}\label{thm:main}
+The space $X$ is nonempty and compact, and $\sigma:X\to X$ is
+continuous, surjective, and topologically mixing. It has neighborhood
+$2$-shadowing. The nonempty clopen cylinder
+$U=\{x\in X:x_0=1\}$ contains no nonempty set $B$ satisfying
+$\sigma^p(B)\subseteq B$ for any $p\geq1$.
+In particular $(X,\sigma)$ answers Question 5.6 affirmatively for every
+integer $N\geq2$.
+\end{theorem}
+
+The forward-shift convention is explicitly included in
+\cite[Section 2]{MS}. The construction is stronger than required:
+mixing implies weak mixing, and the obstruction needs neither
+compactness of $B$ nor equality of its image with $B$.
+
+\section{Topology, mixing, and the periodic-set obstruction}
+Each condition in \eqref{eq:X} depends on finitely many coordinates
+and is closed. Thus $X$ is a closed subset of the compact binary
+product. It contains the zero point and every point with a single
+one. It is shift invariant, and the shift is continuous. Prepending
+a zero to a point of $X$ preserves legality: a progression starting
+at zero meets that zero, and any other progression translates to
+one in the original point. This proves surjectivity.
+
+To prove mixing, fix allowed prefixes $u,v$ of lengths $a,b\geq1$.
+For each $n\geq a+\max(a,b)$, place $u$ at $[0,a)$ and $v$ at
+$[n,n+b)$, and put zeros everywhere else. Call the resulting point
+$x$. A forbidden progression inside either interval would contradict
+the legality of the corresponding prefix. A progression meeting both
+intervals cannot consist entirely of ones either. If its difference
+$p\leq\max(a,b)$, it cannot jump across the zero gap, whose crossing
+requires a step at least $n-a+1>\max(a,b)$. If $p>\max(a,b)$, it
+contains at most one coordinate in each interval, whereas $L(p)\geq3$.
+Consequently $x\in X$. These prefix cylinders form a basis, so every
+sufficiently large $n$ maps some point of any given nonempty open
+set into any other. This is mixing. Applying the assertion to both
+coordinates of two product cylinders at one sufficiently large time
+also proves transitivity of $\sigma\times\sigma$, hence weak mixing.
+
+Now suppose $\varnothing\ne B\subseteq U$ and
+$\sigma^p(B)\subseteq B$ with $p\geq1$. For $x\in B$, induction gives
+$\sigma^{jp}x\in U$, so $x_{jp}=1$ for every $j\geq0$.
+The first $L(p)$ of these entries violate \eqref{eq:X}.
+This proves the obstruction in Theorem~\ref{thm:main}.
+
+\section{A quantitative rotation lemma}
+Write $\{t\}=t-\lfloor t\rfloor$ and
+$\|t\|=\min_{m\in\mathbb Z}|t-m|$.
+
+\begin{lemma}\label{lem:rotation}
+Let $M\geq1$ be an integer, $\alpha=\sqrt2/M$, and
+$P=256M(M+3)$. For every $p\geq1$, $\theta\in\mathbb R$, and
+$0\leq a\leq3/4$, some integer $0\leq j\leq Pp$ satisfies
+\[
+ \{\theta+jp\alpha\}\in[a,a+1/4].
+\]
+\end{lemma}
+\begin{proof}
+Put $\kappa=1/(M(M+3))$. We first show
+\begin{equation}\label{eq:bad}
+ \|k\alpha\|\geq\kappa/k\qquad(k\geq1).
+\end{equation}
+Choose a nearest integer $m$ to $k\alpha$; it is nonnegative and
+$m\leq k\sqrt2/M+1/2$. The integer $2k^2-M^2m^2$ is nonzero,
+since $\sqrt2$ is irrational. Therefore
+\[
+ 1\leq |2k^2-M^2m^2|
+   =M|k\alpha-m|(k\sqrt2+Mm).
+\]
+As $2\sqrt2<3$ and $k\geq1$, the last factor is at most
+$3k+M/2\leq(M+3)k$, which proves \eqref{eq:bad}.
+
+Consider the $17$ circle points $\{rp\alpha\}$, $0\leq r\leq16$.
+One of their $17$ circular gaps has length at most $1/17$.
+Subtracting its endpoint indices gives $1\leq q\leq16$ and an
+integer $r$ such that
+\[
+ 0<|e|\leq1/17,\qquad e=qp\alpha-r,
+ \qquad |e|\geq\kappa/(qp).
+\]
+The strict inequality follows from irrationality; the lower bound
+holds for any integer $r$, by \eqref{eq:bad}.
+Set $\tau=a+1/8$ and $h=|e|$. If $e>0$, put
+$t=\lfloor\{\tau-\theta\}/h\rfloor$; if $e<0$, put
+$t=\lfloor\{\theta-\tau\}/h\rfloor$.
+In both cases $t\geq0$, $th<1$, and
+$\theta+te-\tau$ is within $h$ of an integer. Hence
+$\theta+tqp\alpha$ is within $h<1/8$ of $\tau$ modulo one.
+The interval $[a,a+1/4]$ contains that entire circular neighborhood
+of $\tau$ and lies in $[0,1]$, so its fractional part belongs to
+the desired interval. Finally $j=tq$ satisfies
+\[
+ j<q/|e|\leq q^2p/\kappa\leq256p/\kappa=Pp.
+\]
+\end{proof}
+
+\section{Two points trace every pseudo-orbit}
+Fix $\varepsilon>0$. Choose an integer $R\geq1$ with
+$2^{-(R+1)}<\varepsilon$, and put
+\begin{equation}\label{eq:parameters}
+ M=32(R+1),\quad \alpha=\frac{\sqrt2}{M},\quad
+ P=256M(M+3),\quad D=\max\{R,P^3+2P\},\quad\delta=2^{-D}.
+\end{equation}
+In particular $R\alpha<1/8$.
+For a $\delta$-pseudo-orbit $(z^i)_{i\geq0}$ in $X$, define
+the diagonal $c_k=z^k_0$. The pseudo-orbit inequality forces
+$(z^i)_{j+1}=(z^{i+1})_j$ for $0\leq j\leq D$.
+Iterating this identity gives
+\begin{equation}\label{eq:diagonal}
+ c_{i+j}=(z^i)_j\qquad(0\leq j\leq D+1).
+\end{equation}
+For $p\leq P$, each progression of length $L(p)$ in $c$ lies in
+a window of span
+$(L(p)-1)p=p^3+2p\leq D$. By \eqref{eq:diagonal}, it occurs
+in a point of $X$ and therefore contains a zero.
+
+Define two sets of coordinates
+\[
+ E_0=\{k\geq0:\{k\alpha\}\in[1/8,3/8]\},\qquad
+ E_1=\{k\geq0:\{k\alpha\}\in[5/8,7/8]\}.
+\]
+For $b=0,1$, obtain $a^b$ from $c$ by changing every coordinate
+in $E_b$ to zero. For $p\leq P$, deleting ones preserves the zero
+already found on every progression. For $p>P$, apply
+Lemma~\ref{lem:rotation} with $\theta=s\alpha$ and $a=1/8$ or
+$5/8$. The resulting index $j\leq Pp<p^2<L(p)$ puts a zero in
+each progression of difference $p$ in $a^b$. Thus $a^0,a^1\in X$.
+
+No coordinate $0\leq k\leq R$ belongs to either mask, since
+$0\leq k\alpha\leq R\alpha<1/8$. Consequently $a^0$ and $a^1$
+agree on $[0,R]$, so $d(a^0,a^1)\leq2^{-(R+1)}<\varepsilon$.
+Moreover each window $[i,i+R]$ avoids at least one mask.
+Indeed the circular distance between the two closed quarter intervals
+is at least $1/4$, whereas the phase displacement between any two
+coordinates of the window is at most $R\alpha<1/8$.
+Choose a mask avoided by this window. The corresponding $a^b$ agrees
+with $c$ on the whole window, and hence \eqref{eq:diagonal} gives
+\[
+ d(\sigma^i a^b,z^i)\leq2^{-(R+1)}<\varepsilon.
+\]
+The fixed set $A=\{a^0,a^1\}$ is nonempty, has at most two points,
+has diameter less than $\varepsilon$, and traces the entire
+pseudo-orbit. This completes the proof of Theorem~\ref{thm:main}.
+
+\section{Companion consequences and coverage}
+\paragraph{Why the fixed-length example does not suffice.}
+Let $Y$ be the forward example of \cite[Proposition 4.17]{KLOY}.
+It contains singleton configurations but no configuration with
+three equally spaced ones. Given $\delta>0$, choose $T\geq2$
+with $2^{-(T-1)}<\delta$, and let $z^i$ have its only one at
+$(-i)\bmod T$. This is a $\delta$-pseudo-orbit as in the proof
+below. If a finite family $a^1,\ldots,a^r$ traced it with error
+less than $1$, then for every $j\geq0$ some $a^{c(j)}$ would
+have $a^{c(j)}_{jT}=1$. The finite coloring $j\mapsto c(j)$ has
+a monochromatic three-term arithmetic progression by van der
+Waerden's theorem \cite[Introduction]{KLOY}. One tracer would
+therefore contain three equally spaced ones, a contradiction.
+Thus this older example fails even finite-family tracing, not
+merely the small-diameter requirement.
+
+\begin{corollary}\label{cor:companions}
+The system $X$ has exactly one periodic point, the zero point.
+It has no ordinary shadowing and is not of quasi-finite type.
+\end{corollary}
+\begin{proof}
+If a periodic point of period $p$ has a one at coordinate $s$,
+then it has ones at all $s+jp$, contradicting \eqref{eq:X}.
+
+For failure of ordinary shadowing, fix $\varepsilon=1/2$.
+Given $\delta>0$, choose $T\geq2$ with $2^{-(T-1)}<\delta$.
+Let $z^i$ have its single one at the least nonnegative residue
+of $-i$ modulo $T$. Except when that residue is zero,
+$\sigma z^i=z^{i+1}$. At the exceptional transition the shift
+is the zero point and the next singleton is at coordinate $T-1$,
+so the error is $2^{-(T-1)}$. A single point tracing this pseudo-orbit
+within $1/2$ would have $x_i=1$ exactly when $T$ divides $i$.
+This violates the constraint for difference $T$.
+
+For the last assertion use \cite[Definition 3.5]{MS}.
+Given any proposed quasi-finite-type number $M_0$, choose
+$n\geq M_0$ and put $p=n+1$ and $L=L(p)$.
+Let $u$ be the word of length $(L-2)p+1$ with ones exactly at
+$0,p,\ldots,(L-2)p$, and let $v=1$ and $w=0^n$.
+The zero extension of $u$ belongs to $X$: any all-one progression
+of at least two terms in it has difference $kp$ for an integer
+$k\geq1$, but it has only $L(p)-1<L(kp)$ available ones.
+Thus $uw$ and $wv$ are allowed words. For any word $z$ of length
+$n$, however, $uzv$ has ones at
+$0,p,\ldots,(L-1)p$, since its final coordinate is
+$((L-2)p+1)+n=(L-1)p$.
+It is forbidden regardless of the entries of $z$.
+No $M_0$ can satisfy Definition 3.5.
+\end{proof}
+
+\begin{corollary}\label{cor:general}
+Let $\ell:\mathbb N_{>0}\to\mathbb N$ satisfy $\ell(p)\geq3$ and
+$\ell(p)/p\to\infty$. Replace $L(p)$ in \eqref{eq:X} by $\ell(p)$
+and call the resulting forward subshift $X_\ell$. Then
+Theorem~\ref{thm:main} and Corollary~\ref{cor:companions} hold for
+$X_\ell$. Moreover $X_\ell$ has no mixing number, is not sofic,
+and has no specification property in the sense of \cite[Section 2]{MS}.
+\end{corollary}
+\begin{proof}
+The topology, onto property, zero-gap joining, and invariant-subset
+obstruction use only $\ell(p)\geq3$, not its growth. For two-point
+tracing choose $R,M,\alpha,P$ as in \eqref{eq:parameters}.
+Choose $H\geq1$ with $\ell(p)>Pp$ for all $p>H$, and set
+\[
+ D=\max\left\{R,\max_{1\leq p\leq H}(\ell(p)-1)p\right\}.
+\]
+The diagonal already satisfies every constraint with $p\leq H$.
+For $p>H$, Lemma~\ref{lem:rotation} puts a zero in each mask
+by an index $j\leq Pp<\ell(p)$. The window and initial-diameter
+arguments are unchanged. The proofs of uniqueness of the periodic
+point and failure of ordinary shadowing also apply, using the
+constraint of length $\ell(T)$ in the singleton pseudo-orbit argument.
+
+For failure of quasi-finite type, given a proposed threshold $M_0$,
+choose $b\geq M_0+1$ and select a positive multiple $q$ of $b$
+minimizing $\ell$ among all positive multiples of $b$. Such a minimum
+exists because the values are positive integers. Thus
+$\ell(kq)\geq\ell(q)$ for every $k\geq1$, even if $\ell$ is not
+monotone. Put $n=q-1$, $K=\ell(q)$, and let $u$ have ones exactly
+at $0,q,\ldots,(K-2)q$, with length $(K-2)q+1$.
+Its zero extension is legal: any all-one progression with at least
+two terms has difference $kq$, but $u$ contains only $K-1<\ell(kq)$
+ones. With $v=1$ and $w=0^n$, the words $uw,wv$ are legal, whereas
+every $uzv$ with $|z|=n$ contains the forbidden $q$-progression
+of length $K$. This contradicts Definition 3.5 of \cite{MS}.
+
+A mixing number, as defined after \cite[Proposition 2.3]{MS},
+would be a quasi-finite-type number. A mixing sofic subshift has
+a mixing number by that proposition, so $X_\ell$ is not sofic.
+Finally specification would supply a mixing number: fix
+$\varepsilon<1$. Track the symbols of arbitrary allowed words $u,v$
+on two orbit segments separated by any gap $n$ at least the
+specification constant. A point with the required second segment
+exists by prepending zeros to a point beginning with $v$.
+Tracking within $\varepsilon$ fixes each symbol, giving a legal
+word $uzv$ with $|z|=n$, for every such gap. This is impossible.
+\end{proof}
+
+\begin{corollary}\label{cor:syndetic}
+The tracing points $a^0,a^1$ in Theorem~\ref{thm:main} and
+Corollary~\ref{cor:general} can be chosen so that, for each $b=0,1$,
+the set $\{i\geq0:d(\sigma^i a^b,z^i)<\varepsilon\}$ is syndetic:
+every interval $[s,s+P]$ of integer times meets it.
+\end{corollary}
+\begin{proof}
+If $\{i\alpha\}\in[1/2,3/4]$, the entire phase window of length
+$R$ lies in $[1/2,7/8)$ and avoids $E_0$. If
+$\{i\alpha\}\in[0,1/4]$, that window lies in $[0,3/8)$ and
+avoids $E_1$. The corresponding point traces at time $i$.
+Apply Lemma~\ref{lem:rotation} with $p=1$, starting phase $s\alpha$,
+and each of these quarter intervals. In each case a suitable
+$i=s+j$ exists with $0\leq j\leq P$.
+\end{proof}
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.24\linewidth}p{0.67\linewidth}@{}}
+\toprule
+Item in \cite{MS} & Coverage of this construction\\
+\midrule
+Question 5.6 (p.~12) & Answered: yes, with $N=2$, hence every $N\geq2$;
+mixing and the stronger invariant-subset obstruction.\\
+Question 5.3 (p.~11) & Answered: yes, by the non-quasi-finite-type
+argument in Corollary~\ref{cor:companions}.\\
+Questions 5.1, 5.2 (p.~11) & Answered: yes at $N=1$, as already
+known in \cite[Section 3]{MS}; values $N\geq2$ are not covered.\\
+Questions 5.4, 5.5 (p.~12) & The requested general characterizations are
+not covered.\\
+Fixed-length AP example & Prior proof cited: Moothathu (2010),
+with the later forward presentation in \cite{KLOY}. The
+step-dependent two-point-tracing extension is distinct.\\
+Discussion before Question 5.3 & Not posed; obstruction proved:
+syndetic two-point tracing need not imply quasi-finite type
+(Corollary~\ref{cor:syndetic}).\\
+Converse of Theorem 4.2 & Not asserted in the source; fails for $X$,
+which has neighborhood $2$-shadowing but no specification.\\
+Proposition 4.3 & Theorem~\ref{thm:main} shows that its periodic-set
+hypothesis does not follow from its other hypotheses. It does not
+refute the proposition or decide whether that hypothesis is needed
+for its mixing conclusion.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Proof coverage.}
+\begingroup\small\raggedright
+All results have written proofs above.
+At the pinned \href{https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S1/Dynamics/Shadowing/ProgressionExample.lean}{\texttt{ProgressionExample.lean}},
+the declaration \texttt{quadratic\_\allowbreak progression\_\allowbreak example} states
+nonemptiness, compactness, continuity, surjectivity, product
+transitivity, neighborhood $2$-shadowing, and the obstruction to
+nonempty periodic compact sets. In the same directory,
+\href{https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S1/Dynamics/Shadowing/ProgressionSubshift.lean}{\texttt{ProgressionSubshift.lean}}
+contains \texttt{progression\_\allowbreak shift\_\allowbreak mixing} and
+\texttt{progression\_\allowbreak no\_\allowbreak invariant\_\allowbreak subset};
+\href{https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S1/Dynamics/Shadowing/ProgressionTwoShadowing.lean}{\texttt{ProgressionTwoShadowing.lean}}
+contains \texttt{quadratic\_\allowbreak progression\_\allowbreak neighborhood\_\allowbreak two\_\allowbreak shadowing}.
+The same directory's
+\href{https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S1/Dynamics/Shadowing/QuadraticRotationHitting.lean}{\texttt{QuadraticRotationHitting.lean}}
+contains \texttt{sqrt\_\allowbreak two\_\allowbreak scaled\_\allowbreak round\_\allowbreak lower}
+and \texttt{sqrt\_\allowbreak two\_\allowbreak scaled\_\allowbreak quarter\_\allowbreak hitting},
+the lower bound and hitting estimate in Lemma~\ref{lem:rotation}.
+\href{https://github.com/the-omega-institute/trureturing/blob/d9bb8a406783c5222849b798f3c2ab738f653d75/D5/S1/Dynamics/Shadowing/ReturnDistanceShadowing.lean}{\texttt{ReturnDistanceShadowing.lean}}
+defines \texttt{NeighborhoodTwoShadowing} with one nonempty finite
+set, cardinality at most two, small initial diameter, and tracing
+at every natural time.
+The extra conclusions in Corollaries~\ref{cor:companions}--\ref{cor:syndetic}
+have written proofs; in particular the superlinear two-point-tracing
+extension and syndetic-time conclusion are distinct from the
+quadratic tracing declaration.
+The accompanying \texttt{verify.py} checks finite joining,
+rotation-mask, and word-obstruction instances with integer arithmetic;
+those checks are illustrations, not premises of the infinite arguments.
+\par\endgroup
+
+\begin{thebibliography}{6}
+\bibitem{CLMV} D. Carrasco-Olivera, K. Lee, C. A. Morales and
+H. Villavicencio, \emph{Finite-expansivity and $N$-shadowing},
+Bulletin of the Brazilian Mathematical Society, New Series
+\textbf{53} (2022), 107--126,
+\href{https://doi.org/10.1007/s00574-021-00253-w}{doi:10.1007/s00574-021-00253-w}.
+\bibitem{Moo} T. K. Subrahmonian Moothathu,
+\emph{Diagonal points having dense orbit},
+Colloquium Mathematicum \textbf{120}(1) (2010), 127--138,
+\href{https://doi.org/10.4064/cm120-1-9}{doi:10.4064/cm120-1-9}.
+\bibitem{KLOY} D. Kwietniak, J. Li, P. Oprocha and X. Ye,
+\emph{Multi-recurrence and van der Waerden systems},
+Science China Mathematics \textbf{60}(1) (2017), 59--82;
+first preprint 7 January 2015,
+\href{https://arxiv.org/abs/1501.01491v3}{arXiv:1501.01491v3}
+(2 September 2016).
+\bibitem{MO} zeb (30 October 2020) and R. Pavlov (28 July 2021),
+answers to M. Nielsen, \emph{Binary words that are nonconstant on
+long arithmetic progressions}, MathOverflow 375212,
+\href{https://mathoverflow.net/questions/375212/binary-words-that-are-nonconstant-on-long-arithmetic-progressions}{question and answers}.
+\bibitem{CKKK} M. E. Can, J. Konieczny, M. Kupsa and D. Kwietniak,
+\emph{Minimal and proximal examples of $\bar d$-stable and
+$\bar d$-approachable shift spaces},
+Ergodic Theory and Dynamical Systems \textbf{45}(2) (2025), 396--426;
+\href{https://arxiv.org/abs/2308.13967v2}{arXiv:2308.13967v2}
+(12 May 2024; first preprint 26 August 2023).
+\bibitem{MS} J. Meddaugh and E. Stephens,
+\emph{Shadowing With Small Diameter Sets Of Bounded Cardinality},
+arXiv:2509.04312v1 (4 September 2025),
+\href{https://arxiv.org/abs/2509.04312v1}{arXiv:2509.04312v1}.
+\end{thebibliography}
+\noindent\small
+This note is licensed under Creative Commons Attribution 4.0
+International (CC BY 4.0).
+\end{document}

@@ -1,0 +1,36 @@
+{
+  "generated_paths": [
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "CONTRIBUTING.md",
+    "LICENSES/CC-BY-4.0.txt",
+    "README.md",
+    "formalization/nodes.json",
+    "manuscript/mixing-progression-subshift-v2/README.md",
+    "manuscript/mixing-progression-subshift-v2/checks.json",
+    "manuscript/mixing-progression-subshift-v2/metadata.json",
+    "manuscript/mixing-progression-subshift-v2/note.tex",
+    "manuscript/mixing-progression-subshift-v2/verify.py",
+    "paper.json",
+    "paper.pdf",
+    "source.archive"
+  ],
+  "generator_version": "0.1.0",
+  "sha256": {
+    "CHANGELOG.md": "f71fd583b1ff2890a84c3922f536a64e1c0c817f0941c14c7d98294159daec28",
+    "CITATION.cff": "666a6e0b8485cdf1de9a15238d371ff3011e7fc80eee20850fd48345b5437439",
+    "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
+    "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
+    "README.md": "78a01ea72d1bd352fd1a58376336df8fe70b37ec3a8f462e50dc05dca4db4083",
+    "formalization/nodes.json": "41c69e64d4cf8a9e8af74c937dcc2ea04f2220dbd29d56342fe8e9eace241ead",
+    "manuscript/mixing-progression-subshift-v2/README.md": "c2f1acd24911686b7b2960a57ffd92fa913d42cb3b2b2da01992bb153519e900",
+    "manuscript/mixing-progression-subshift-v2/checks.json": "79a6cbe63560f973d02e127091662ced88e96872fde6af01cb6362e2200834f8",
+    "manuscript/mixing-progression-subshift-v2/metadata.json": "bf57bb00205ca6a032e372fb605ae11497d125bfd809fe0947846f2f2332c791",
+    "manuscript/mixing-progression-subshift-v2/note.tex": "30095923db55dba0f36d53ed75ccd08d1e1b7cc39942a8420d8251ef9aae74d4",
+    "manuscript/mixing-progression-subshift-v2/verify.py": "c36b3b50563aff90b6e6dda681f84339c5dd918dfd8dffb56018483438a4763f",
+    "paper.json": "7ef8618c90c0d956d2a733a8c0b444a8815f44d98385de488de526a61196550e",
+    "paper.pdf": "61befad46d22d0938903763f0b950be3695ec05853016c54d546fae65cadab90",
+    "source.archive": "5b4413ddacc7fb9509abb21ffa980f07a3b180a2bdbd1723501f8570bbaca5bd"
+  },
+  "snapshot_identity": "e941feac386d725215a5ef74ebcca85c278898af36a376ccab3b3de18299f7ba"
+}

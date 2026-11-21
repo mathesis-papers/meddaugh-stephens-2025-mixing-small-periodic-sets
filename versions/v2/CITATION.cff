@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Neighborhood two-shadowing for progression subshifts: an extension of Moothathu (2010) answering Meddaugh–Stephens, arXiv:2509.04312v1, Section 5, Question 5.6"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-21"
+version: "2"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/meddaugh-stephens-2025-mixing-small-periodic-sets?version=2"
+license: "CC-BY-4.0"
