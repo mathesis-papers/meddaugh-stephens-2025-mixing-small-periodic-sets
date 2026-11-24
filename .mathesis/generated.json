@@ -22,7 +22,7 @@
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
     "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
     "README.md": "2ceda39eb60fed2157fc132d2165367fd687175e2784551b82c244adbfd0b1b8",
-    "formalization/nodes.json": "41c69e64d4cf8a9e8af74c937dcc2ea04f2220dbd29d56342fe8e9eace241ead",
+    "formalization/nodes.json": "0661962becd3c4d739e2ba363487bb7b4ddc1d593faea1380dc135219aeec983",
     "manuscript/mixing-progression-subshift-v2/README.md": "c2f1acd24911686b7b2960a57ffd92fa913d42cb3b2b2da01992bb153519e900",
     "manuscript/mixing-progression-subshift-v2/checks.json": "79a6cbe63560f973d02e127091662ced88e96872fde6af01cb6362e2200834f8",
     "manuscript/mixing-progression-subshift-v2/metadata.json": "bf57bb00205ca6a032e372fb605ae11497d125bfd809fe0947846f2f2332c791",
@@ -32,5 +32,5 @@
     "paper.pdf": "61befad46d22d0938903763f0b950be3695ec05853016c54d546fae65cadab90",
     "source.archive": "5b4413ddacc7fb9509abb21ffa980f07a3b180a2bdbd1723501f8570bbaca5bd"
   },
-  "snapshot_identity": "413bd0658365d4ea675ad1e4c074f2c37a0e3e9f238880fecc8106c1665f9e6c"
+  "snapshot_identity": "f9dc7953f14906a25b5491f4d71151da6dbbe56cc36b10b3f1f0981886566fee"
 }
